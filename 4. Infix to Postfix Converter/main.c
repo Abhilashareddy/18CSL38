@@ -15,7 +15,6 @@
 char stack[MX];
 
 int top=-1;
-// int cp=0,co=0;
 
 // Check stack underflow
 int isEmpty() {
@@ -44,8 +43,10 @@ void push(char item){
 
 // Stack Pop
 char pop() {
-    if (isEmpty())
-        printf("Stack Underflow!\n");
+    if (isEmpty()) {
+        printf("Error: Invalid Parenthesis!\n");
+        exit(1);
+    }
     else
         return stack[top--];
 }
@@ -63,27 +64,11 @@ int precedence(char op) {
         case '%': return 3;
         case '^': return 4;
         default:
-            printf("Invalid Operator\n");
-            exit(0);
+            printf("Error: Invalid Operator\n");
+            exit(1);
             break;
     }
 }
-
-// // Check char is an operator
-// int isOperator(char item){
-//     // if given character matches below switch cases
-//     // function will return 1 otherwise 0
-//     switch (item)
-//     {
-//         case '+':
-//         case '-':
-//         case '*':
-//         case '/':
-//         case '%':
-//         case '^': return 1;
-//         default:  return 0;
-//     }
-// }
 
 // Compute arithmetic operation
 int compute(char symbol, int op1, int op2) {
@@ -107,13 +92,19 @@ int Convert(char *infix, char *postfix) {
     int i=0; // infix
     int k=0; // postfix
 
-    // for error handling purposes top element of stack will be #
+    int co=0; // count Operators 
+    int ca=0; // count Operands
+
+    // for error handling purposes top element of stack will be '#'
     push('#');
 
-    while((ch != infix[i++]) != '\0') {
-        if( ch == '(' ) push(ch); // Push to stack
-        else if ( isalnum(ch) ) postfix[k++] = ch; // insert char to postfix string
-        else if ( ch == ')' ) {
+    while((ch = infix[i++]) != '\0') {
+        if( ch == '(' ) {
+            push(ch); // Push to stack
+        } else if ( isalnum(ch) ) {
+            postfix[k++] = ch; // insert char to postfix string
+            ca++;
+        } else if ( ch == ')' ) {
             // insert char in stack till '(' is found
             while(stack[top] != '(')
                 postfix[k++] = pop(); 
@@ -121,6 +112,7 @@ int Convert(char *infix, char *postfix) {
         } else {
             // if char in stack is of higher precedence than ch
             // insert to postfix
+            co++;
             while(precedence(stack[top]) >= precedence(ch) )
                 postfix[k++] = pop();
             push(ch); // Now push ch to stack
@@ -131,7 +123,10 @@ int Convert(char *infix, char *postfix) {
         // check if there's any remaining '(' in stack
         if (stack[top] == '(') {
             printf("Error: Invalid Parenthesis\n");
-            exit(0);
+            exit(1);
+        } else if (co != ca-1) { // No of operands should be equal to (1 less than no. of operators)
+            printf("Invalid Expression\n");
+            exit(1);
         } else {
             // Now insert all operators remaining in stack to postfix
             postfix[k++] = pop();
