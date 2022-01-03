@@ -1,10 +1,11 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
+#include <stdio.h>   // basic i/o
+#include <stdlib.h>  // exit()
+#include <math.h>    // pow()
+#include <ctype.h>   // isdigit()
 
-#define MX 10
+#define MX 10 // stack size
 
-int stack[MX], top = -1;
+int stack[MX], top = -1; // initialize stack
 
 // Check char is an operator
 int isOperator(char item){
@@ -50,7 +51,7 @@ int compute(char symbol, int op1, int op2)
 void isStackEmpty() {
     if (top<0) {
         printf("Invalid Expression!\n");
-        exit(0);
+        exit(1);
     }
 }
 
@@ -58,8 +59,8 @@ void isStackEmpty() {
 int Eval(char *postfix) {
     int i=0, op1, op2; // index of postfix
     char val; // temp char of postfix string
-    while(postfix[i++] != '\0') {
-        val = postfix[i]; 
+    while(postfix[i] != '\0') {
+        val = postfix[i];
         // Check for digit
         if(isdigit(val)) {
             // Push to stack after converting to int
@@ -72,13 +73,15 @@ int Eval(char *postfix) {
             isStackEmpty();
             op2 = stack[top--]; // pop from stack
             isStackEmpty();
-            op2 = stack[top--];
+            op1 = stack[top--];
             // Compute and push result back to stack
             stack[++top] = compute(val, op1, op2);
         } else {
+            // output error
             printf("Invalid usage of operator\n");
-            exit(0); // exit
+            exit(1); // exit
         }
+        i++; // increment index 
     }
     
     if(top==0){
@@ -87,4 +90,11 @@ int Eval(char *postfix) {
         printf("Invalid Expression!\n");
     }
 
+}
+
+void main() {
+    char postfix[100];
+    printf("Expression: ");
+    scanf("%s", postfix);
+    Eval(postfix);
 }
