@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+#define MX 10
+
+int stack[MX], top = -1;
+
 // Check char is an operator
 int isOperator(char item){
     // if given character matches below switch cases
