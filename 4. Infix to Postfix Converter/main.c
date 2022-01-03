@@ -81,28 +81,6 @@ int precedence(char op)
     }
 }
 
-// Compute arithmetic operation
-int compute(char symbol, int op1, int op2)
-{
-    switch (symbol)
-    {
-    case '+':
-        return op1 + op2;
-    case '-':
-        return op1 - op2;
-    case '*':
-        return op1 * op2;
-    case '/':
-        return op1 / op2;
-    case '%':
-        return op1 % op2;
-    case '^':
-        return pow(op1, op2);
-    default:
-        return 0;
-    }
-}
-
 // Function to convert infix to postfix
 // returns postfix string on success
 int Convert(char *infix, char *postfix)
