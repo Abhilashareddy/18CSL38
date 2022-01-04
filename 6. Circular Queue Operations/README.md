@@ -34,4 +34,11 @@ __Case 1__: FRONT = 0 && REAR == SIZE - 1
 __Case 2__: FRONT = REAR + 1
 The second case happens when REAR starts from 0 due to circular increment and when its value is just 1 less than FRONT, the queue is full.
 
+<img alt="enqueue and dequeue operation of the circular queue" height="1396" src="https://cdn.programiz.com/sites/tutorial2program/files/circular-queue-program.png" title="Working of circular queue">
+
+## Applications of Circular Queue
+- CPU scheduling
+- Memory management
+- Traffic Management
+
 Source: https://www.programiz.com/dsa/circular-queue
