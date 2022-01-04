@@ -82,7 +82,6 @@ int precedence(char op)
 }
 
 // Function to convert infix to postfix
-// returns postfix string on success
 int Convert(char *infix, char *postfix)
 {
     char ch; // holds char from infix
