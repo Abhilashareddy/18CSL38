@@ -16,7 +16,17 @@
             - pop stack and insert to postfix
         - now perform push for item
     5. end loop
-4. 
+4. until stack[top] = '#' // i.e. until stack empty
+    1. if char in stack top is '(' then
+        - output error "Invalid Parenthesis"
+        - exit
+    2. else if no. of operators is not equal to [ (no. of alphanumeric chars(operands) ) - 1 ]
+        - output "Invalid Expression"
+    3. else
+        - pop and insert to postfix
+5. set end character of postfix to null '\0'
+6. Execute main function
+
 
 
 
