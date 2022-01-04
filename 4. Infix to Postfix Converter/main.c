@@ -102,7 +102,7 @@ int Convert(char *infix, char *postfix)
         {
             push(ch); // Push to stack
         }
-        else if (isalnum(ch))
+        else if (isalnum(ch)) // if ch lies within A-Z or a-z or 0-9 :: alphanumeric
         {
             postfix[k++] = ch; // insert char to postfix string
             ca++;
@@ -133,6 +133,7 @@ int Convert(char *infix, char *postfix)
             printf("Error: Invalid Parenthesis\n");
             exit(1);
         }
+        // if no. of operators mismatch with no. of operands - 1
         else if (co != ca - 1)
         { // No of operands should be equal to (1 less than no. of operators)
             printf("Invalid Expression\n");
