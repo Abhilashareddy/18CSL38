@@ -1,3 +1,7 @@
+/*
+    Solving Tower of Hanoi problem with n disks
+*/
+
 #include <stdio.h>
 // #include <math.h> // pow()
 

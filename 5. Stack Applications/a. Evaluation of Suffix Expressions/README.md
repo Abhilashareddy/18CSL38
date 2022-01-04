@@ -1,5 +1,7 @@
 # Evaluation of suffix expression
 
+### Evaluation of Suffix expression with single digit operands and operators (+ */. %. ^)
+
 ## Algorithm
 
 - #### Start

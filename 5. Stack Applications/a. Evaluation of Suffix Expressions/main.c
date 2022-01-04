@@ -1,3 +1,7 @@
+/*
+    Evaluation of Suffix expression with single digit operands and operators
+*/
+
 #include <stdio.h>   // basic i/o
 #include <stdlib.h>  // exit()
 #include <math.h>    // pow()

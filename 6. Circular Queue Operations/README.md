@@ -41,4 +41,4 @@ The second case happens when REAR starts from 0 due to circular increment and wh
 - Memory management
 - Traffic Management
 
-Source: https://www.programiz.com/dsa/circular-queue
+_Source and Copyright_: [Programiz.com](https://www.programiz.com/dsa/circular-queue)
