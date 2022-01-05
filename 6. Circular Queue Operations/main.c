@@ -2,17 +2,18 @@
 
 #define SIZE 5
 
-char CQ[SIZE];
+char CQ[SIZE]; // Queue
 
+// f -> front | r -> rear | c -> count
 int f=0,r=0,c=0;
 
 void enqueue(){
-    // first we'll increment front
+    // first we'll increment rear
     r = (r+1) % SIZE;
     if (f==r) { // if front == rear
         printf("Stack Overflow!\n");
-        // now we'll revert back rear to previous state
-        // because we're not performing insert as stack full
+        // now we'll revert back rear to its previous value
+        // because we're not performing insert as stack is full
         if (r==0) 
             r = SIZE -1;
         else 
