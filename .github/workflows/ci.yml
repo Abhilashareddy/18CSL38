@@ -13,8 +13,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: list all c files
-      run: find -regex '.*/.*\.\(c\)$'
+    - name: install gcc
+      run: |
+          sudo apt-get install gcc -y
     - name: compile all programs
       run: |
           for i in **/*.c; do
