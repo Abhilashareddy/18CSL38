@@ -17,11 +17,11 @@ jobs:
       run: find -regex '.*/.*\.\(c\)$'
     - name: compile all programs
       run: |
-          for i in **/*.c; do # Whitespace-safe and recursive
+          for i in **/*.c; do
           echo "$i"
-          gcc "$i"
+          gcc "$i" -lm
           done
-          for i in **/**/*.c; do # Whitespace-safe and recursive
+          for i in **/**/*.c; do
           echo "$i"
           gcc "$i" -lm
           done
