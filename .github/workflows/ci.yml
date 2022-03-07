@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: list all c files
+      run: find -regex '.*/.*\.\(c\)$'
     - name: compile all programs
       run: |
           find -regex '.*/.*\.\(c\)$' -exec gcc {} \;
