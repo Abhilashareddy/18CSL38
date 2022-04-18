@@ -129,9 +129,11 @@ void main()
 			delete ("rear");
 			break;
 		case 6:
+			printf("Performing Stack Insert\n");
 			insert("front");
 			break;
 		case 7:
+			printf("Performing Queue Delete\n");
 			delete ("front");
 			break;
 		case 8:
