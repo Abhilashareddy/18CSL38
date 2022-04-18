@@ -93,7 +93,6 @@ int Delete()
     if (arr_len < 1)
     {
         printf("Empty Array!\n");
-        return;
     }
     else
     { // if not empty
@@ -104,17 +103,18 @@ int Delete()
         if (pos > arr_len)
         {
             printf("Invalid position\n");
-            return; // Exit
         }
-
-        elem = arr[pos]; // Set removed element
-
-        for (i = pos; i < arr_len; i++)
+        else
         {
-            arr[i] = arr[i + 1];
-        }
+            elem = arr[pos]; // Set removed element
 
-        arr_len--; // Array Size decreased by 1
+            for (i = pos; i < arr_len; i++)
+            {
+                arr[i] = arr[i + 1];
+            }
+
+            arr_len--; // Array Size decreased by 1
+        }
     }
     return elem;
 }
