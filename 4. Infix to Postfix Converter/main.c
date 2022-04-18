@@ -1,7 +1,7 @@
 /*
-    Design, Develop and Implement a Program in C for converting 
-    an Infix Expression to Postix Expression. 
-    Program should support for both parenthesized and free parenthesized expression 
+    Design, Develop and Implement a Program in C for converting
+    an Infix Expression to Postix Expression.
+    Program should support for both parenthesized and free parenthesized expression
     with the operators: +,-./, % (Remainder), ^(Power) and alphanumeric operands.
 */
 

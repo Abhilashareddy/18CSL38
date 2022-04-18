@@ -1,4 +1,4 @@
-/* 
+/*
     1. Design, Develop and Implement a menu driven Program in C for the following Array operations.
         a. Creating an Array of N Integer Elements.
         b. Display of Array Elements with Suitable Headings.
@@ -12,13 +12,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int arr[20]; // Initialize array of integers
+int arr[20];     // Initialize array of integers
 int arr_len = 0; // Length of array
 
 // Create an array
 void Create()
 {
-    int i; //Loop var
+    int i; // Loop var
 
     for (i = 0; i < arr_len; i++)
     {
@@ -64,7 +64,7 @@ void Insert(int pos, int elem)
     if (pos > arr_len)
     {
         printf("Invalid position\n");
-        return; //Exit
+        return; // Exit
     }
 
     arr_len++; // Array Size increased by 1
@@ -104,7 +104,7 @@ int Delete()
         if (pos > arr_len)
         {
             printf("Invalid position\n");
-            return; //Exit
+            return; // Exit
         }
 
         elem = arr[pos]; // Set removed element
@@ -162,6 +162,6 @@ int main()
             printf("Invalid Choice!\n");
         }
     }
-    
+
     return 0;
 }

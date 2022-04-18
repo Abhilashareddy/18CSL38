@@ -17,7 +17,7 @@ ___
 
 **2. Design, Develop and Implement a Program in C for the following operations on Strings**
 
-* Read a main String (STR), a Pattern String (PAT) and a Replace String (REP)
+* Read the main String (STR), a Pattern String (PAT), and a Replace String (REP)
 
 * Perform Pattern Matching Operation: Find and Replace all occurrences of PAT in STR with REP if PAT exists in STR. Report suitable messages in case PAT does not exist in STR 
 
@@ -45,9 +45,9 @@ ___
 ___
 
 
-**5. Design, Develop and implement a Program in C for the following Stack Applications**
+**5. Design, Develop and implement a program in C for the following Stack Applications**
 
-* Evaluation of Suffix expression with single digit operands and operators (+ */. %. ^)
+* Evaluation of Suffix expression with single-digit operands and operators (+ */. %. ^)
 
 * Solving Tower of Hanoi problem with n disks
 ___
@@ -67,35 +67,35 @@ ___
 _Support the program with appropriate functions for each of the above operations_
 ___
 
-**7. Design, Develop Implement a menu driven in C for the following operations Singly Linked List (SLL) of Student Data with the fields USN, Name, Branch, Sem, PhNo**
+**7. Design, Develop Implement a menu-driven in C for the following operations Singly Linked List (SLL) of Student Data with the fields USN, Name, Branch, Sem, PhNo**
 
-* Create a SLL of N Students Data by using front insertion
+* Create an SLL of N Students Data by using front insertion
 
 * Display the status of SLL and count the number of nodes in it
 
-* Perform Insertion/Deletion at End of SLL
+* Perform Insertion/Deletion at the End of SLL
 
-* Perform Insertion / Deletion at Front of SLL(Demonstration of stack)
+* Perform Insertion / Deletion in Front of SLL(Demonstration of stack)
 
 * Exit
 ___
 
-**8. Design, Develop and Implement a menu driven Program in C for the following operations Doubly Linked List (DLL) of Employee Data with the fields: SSN, Name, Dept. Designation Sal, PhNo**
+**8. Design, Develop and Implement a menu-driven Program in C for the following operations Doubly Linked List (DLL) of Employee Data with the fields: SSN, Name, Dept. Designation Sal, PhNo**
 
 * Create a DLL. of N Employees Data by using end insertion.
 
 * Display the status of DLL and count the number of nodes in it 
 
-* Perform Insertion and Deletion at End of DLL
+* Perform Insertion and Deletion at the End of DLL
 
-* Perform Insertion and Deletion at Front of DLL 
+* Perform Insertion and Deletion in Front of DLL 
 
 * Demonstrate how this DLL can be used as Double Ended Queue
 
 * Exit
 ___
 
-**9. Design, Develop and Implement a Program in C for the following operations on Singly Circula Linked List (SCLL) with header nodes**
+**9. Design, Develop and Implement a Program in C for the following operations on Singly Circular Linked List (SCLL) with header nodes**
 
 * Represent and Evaluate a Polynomial P(x,y,z) = 6x³y¹z-4y2+3x³y2+2xyz-2xyz'
 
@@ -108,7 +108,7 @@ ___
 
 * Binary Search Tree (BST) of Integers a. Create a BST of N Integers: 6, 9, 5, 2, 8, 15, 24, 14, 7, 8, 5, 2
 
-* Traverse the BST in Inorder, Preorder and Post Order 
+* Traverse the BST in Inorder, Preorder, and Post Order 
 
 * Search the BST for a given element (KEY) and report the appropriate message
 
@@ -122,7 +122,7 @@ ___
 * Print all the nodes reachable from a given starting node in a digraph using DFS/BFS method.
 ___
 
-**12. Given a File of N employee records with a set K of Keys(4-digit) which uniquely determine the records in file F. Assume that file F is maintained in memory by a Hash Table(HT) of m memory locations with L as the set of memory addresses (2-digit) of locations in HT. Let the keys in K and addresses in L are Integers. Design and develop a Program in C that uses Hash function H: K→L as H(K)=K mod m (remainder method), and implement hashing technique to map a given key K to the address space L. Resolve the collision (if any) using linear**
+**12. Given a File of N employee records with a set K of Keys(4-digit) which uniquely determine the records in file F. Assume that file F is maintained in memory by a Hash Table(HT) of m memory locations with L as the set of memory addresses (2-digit) of locations in HT. Let the keys in K and addresses in L be Integers. Design and develop a program in C that uses Hash function H: K→L as H(K)=K mod m (remainder method), and implement hashing technique to map a given key K to the address space L. Resolve the collision (if any) using linear**
 ___
 
 <style type="text/css">
